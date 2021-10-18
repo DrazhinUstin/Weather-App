@@ -1,6 +1,6 @@
 /*************************************** IMPORTS ***************************************/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-.message-area, .line-through, .table-row > *, body {
+.preloader, .message-area, .line-through, .table-column, body {
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -16,6 +16,59 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: unset;
+  -webkit-transform: unset;
+          transform: unset;
+  width: 100%;
+  height: 100%;
+  background-color: #8456f1;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 99;
+}
+
+.preloader span {
+  width: 5rem;
+  height: 5rem;
+  border: 0.5rem solid #fff;
+  border-right-color: #8456f1;
+  border-radius: 50%;
+  -webkit-animation: loading 0.5s linear 0s infinite;
+          animation: loading 0.5s linear 0s infinite;
+}
+
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -99;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .message-area {
@@ -191,13 +244,13 @@
   border-bottom: none;
 }
 
-.table-row > * {
+.table-column {
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
   padding: 1rem 0.5rem;
 }
 
-.table-row > *:first-child {
+.table-column:first-child {
   border-right: 1px solid #ccc;
 }
 
@@ -208,7 +261,7 @@
   .table i {
     font-size: 1.2rem;
   }
-  .table-row > * {
+  .table-column {
     -ms-grid-columns: 1fr 3fr;
         grid-template-columns: 1fr 3fr;
   }

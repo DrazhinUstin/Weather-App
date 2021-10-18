@@ -18,4 +18,9 @@ const displayMessage = (message, className) => {
     messageDOM.innerHTML = message;
 };
 
-export {setDate, displayMessage};
+const hidePreloader = () => {
+    const preloader = document.querySelector('.preloader');
+    setTimeout(() => preloader.classList.add('hide'), 200);
+};
+
+export {setDate, displayMessage, hidePreloader};

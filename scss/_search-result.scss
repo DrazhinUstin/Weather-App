@@ -53,14 +53,15 @@
     &:last-child {
         border-bottom: none;
     }
-    & > * {
-        @extend %grid-center;
-        grid-template-columns: 1fr 2fr;
-        padding: 1rem 0.5rem;
-        &:first-child {
-            border-right: 1px solid $grey;
-        } 
-    }
+}
+
+.table-column {
+    @extend %grid-center;
+    grid-template-columns: 1fr 2fr;
+    padding: 1rem 0.5rem;
+    &:first-child {
+        border-right: 1px solid $grey;
+    } 
 }
 
 @media screen and (max-width: 400px) {
@@ -70,10 +71,8 @@
             font-size: 1.2rem;
         }
     }
-    .table-row {
-        & > * {
-            grid-template-columns: 1fr 3fr;
-        }
+    .table-column {
+        grid-template-columns: 1fr 3fr;
     }
 }
 
