@@ -7,8 +7,8 @@ const fetchData = async (city, geo) => {
     if (city) {
         url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
     } else {
-        const [lat, lon] = geo;
-        url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
+        const {latitude, longitude} = geo;
+        url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API_KEY}`;
     }
     try {
         const response = await fetch(url);

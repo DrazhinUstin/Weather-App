@@ -1,5 +1,7 @@
 .search-result {
     @include fixed-position(50%, 50%, unset, translate(-50%, -50%));
+    max-height: 95vh;
+    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
     text-align: center;
@@ -58,5 +60,28 @@
         &:first-child {
             border-right: 1px solid $grey;
         } 
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .table {
+        font-size: 0.9rem;
+        i {
+            font-size: 1.2rem;
+        }
+    }
+    .table-row {
+        & > * {
+            grid-template-columns: 1fr 3fr;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .table {
+        font-size: 0.85rem;
+        i {
+            font-size: 1.1rem;
+        }
     }
 }

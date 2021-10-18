@@ -29,6 +29,9 @@ h1, h2 {
     text-transform: capitalize;
     letter-spacing: $space;
 }
+h1 {
+    font-size: 2rem;
+}
 p {
     line-height: 1.5;
 }
@@ -38,6 +41,24 @@ button {
 }
 i {
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 0.95rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    body {
+        font-size: 0.9rem;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
 }
 
 /*************************************** COMMON CLASSES ***************************************/
@@ -76,9 +97,15 @@ i {
     letter-spacing: $space;
     transition: $transition;
     &.orange {
-        background: $orange;
+        background: linear-gradient($orange, $orange-2);
     }
     &:hover {
         column-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .wrapper {
+        width: 95vw;
     }
 }
