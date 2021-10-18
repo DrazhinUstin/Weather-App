@@ -1,0 +1,39 @@
+$primary-clr: #8456f1;
+$primary-clr-2: rgb(97, 50, 207);
+$red: rgb(235, 28, 28);
+$red-2: rgb(250, 131, 131);
+$orange: rgb(235, 142, 28);
+$black: rgb(19, 18, 18);
+$white: #fff;
+$grey: #ccc;
+$yellow: rgb(235, 235, 36);
+$space: 0.1rem;
+$radius: 0.5rem;
+$transition: all 0.4s ease;
+
+%grid-center {
+    display: grid;
+    place-items: center;
+}
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin absolute-position ($top, $left, $right, $transform) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    transform: $transform;
+}
+
+@mixin fixed-position ($top, $left, $right, $transform) {
+    position: fixed;
+    top: $top;
+    left: $left;
+    right: $right;
+    transform: $transform;
+}

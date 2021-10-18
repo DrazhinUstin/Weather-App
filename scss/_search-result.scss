@@ -1,0 +1,62 @@
+.search-result {
+    @include fixed-position(50%, 50%, unset, translate(-50%, -50%));
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    transition: $transition;
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.date {
+    margin-top: 1rem;
+    font-style: italic;
+    letter-spacing: $space;
+}
+
+.temperature {
+    @extend %flex-center;
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+.feelings {
+    letter-spacing: $space;
+    .feels-like {
+        color: $red;
+        font-weight: 500;
+    }
+}
+
+.table {
+    margin: 2rem 0;
+    border: 1px solid $grey;
+    border-radius: 0.5rem;
+    span {
+        color: $red;
+    }
+    i {
+        color: $primary-clr-2;
+        font-size: 1.4rem;
+    }
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid $grey;
+    &:last-child {
+        border-bottom: none;
+    }
+    & > * {
+        @extend %grid-center;
+        grid-template-columns: 1fr 2fr;
+        padding: 1rem 0.5rem;
+        &:first-child {
+            border-right: 1px solid $grey;
+        } 
+    }
+}

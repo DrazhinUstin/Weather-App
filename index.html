@@ -9,6 +9,81 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <section class="intro wrapper">
+        <header class="header">
+            <img src="media/sun.svg" alt="sun">
+            <h1>Weather app</h1>
+        </header>
+        <div class="message-area">
+            <p>Welcome to our weather app! Want to know what the weather is like today?</p>
+        </div>
+        <form class="search-form">
+            <input type="text" placeholder="Enter city name..." required>
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-search"></i>
+            </button>
+            <button type="button" class="clear-btn">
+                <i class="fas fa-times-circle"></i>
+            </button>
+        </form>
+        <div class="line-through">
+            <span></span>
+        </div>
+        <button type="button" class="get-location btn">
+            <i class="fas fa-map-marked-alt"></i>
+            Get device location
+        </button>
+    </section>
+    <section class="search-result wrapper">
+        <header class="header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h2></h2>
+        </header>
+        <p class="date"></p>
+        <div class="temperature">
+            <img src="http://openweathermap.org/img/wn/10n@2x.png" alt="weather-image">
+            <h2></h2>
+        </div>
+        <p class="feelings"></p>
+        <div class="table">
+            <div class="table-row">
+                <div class="table-column">
+                    <i class="fas fa-tint"></i>
+                    <div>
+                        <p>Humidity:</p>
+                        <p class="humidity"><span></span></p>
+                    </div>
+                </div>
+                <div class="table-column">
+                    <i class="fas fa-thermometer-half"></i>
+                    <div>
+                        <p>Pressure:</p>
+                        <p class="pressure"><span></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="table-row">
+                <div class="table-column">
+                    <i class="fas fa-cloud"></i>
+                    <div>
+                        <p>Cloudiness:</p>
+                        <p class="clouds"><span></span></p>
+                    </div>
+                </div>
+                <div class="table-column">
+                    <i class="fas fa-wind"></i>
+                    <div>
+                        <p>Wind speed:</p>
+                        <p class="wind"><span></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="return btn orange">
+            <i class="fas fa-arrow-left"></i>
+            Return
+        </button>
+    </section>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>

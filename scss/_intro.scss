@@ -1,0 +1,37 @@
+.intro {
+    display: block;
+}
+
+.message-area {
+    height: 4rem;
+    @extend %grid-center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    border-radius: $radius;
+    background-color: $yellow;
+    text-align: center;
+    span {
+        color: $primary-clr-2;
+        font-weight: 500;
+    }
+    &.alert {
+        background-color: $red-2;
+    }
+}
+
+.line-through {
+    height: 4rem;
+    @extend %grid-center;
+    span {
+        width: 100%;
+        height: 1px;
+        @extend %flex-center;
+        background-color: $grey;
+        &::before {
+            content: 'or';
+            padding: 0 1rem;
+            background-color: $white;
+            color: $grey;
+        }
+    }
+}
