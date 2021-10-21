@@ -362,6 +362,7 @@ i {
 }
 
 .header i {
+  margin-right: 0.5rem;
   color: #6132cf;
   font-size: 1.4rem;
 }

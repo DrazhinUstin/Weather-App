@@ -15,6 +15,7 @@ const setupSearch = () => {
         event.preventDefault();
         const value = input.value;
         input.value = '';
+        input.blur();
         displayMessage(`Searching <span>${value}</span>...`);
         const data = await fetchData(value);
         if (data.message) {
@@ -28,6 +29,7 @@ const setupSearch = () => {
     
     clearBtn.addEventListener('click', () => {
         input.value = '';
+        input.focus();
     });
     
     returnBtn.addEventListener('click', () => {

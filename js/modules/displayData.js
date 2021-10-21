@@ -2,7 +2,7 @@ const displayData = (data) => {
     // Destructure data
     const {name, sys: {country}, main: {temp, feels_like, humidity, pressure}, weather: [{description, icon}], clouds: {all}, wind: {speed}} = data;
     // Add data to the DOM
-    const nameDOM = document.querySelector('.search-result h2');
+    const nameDOM = document.querySelector('.search-result h2 span');
     nameDOM.textContent = `${name}, ${country}`;
     const imageDOM = document.querySelector('.temperature img');
     imageDOM.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
