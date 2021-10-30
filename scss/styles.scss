@@ -37,7 +37,6 @@ p {
     line-height: 1.5;
 }
 button {
-    line-height: 1;
     cursor: pointer;
 }
 i {
@@ -66,10 +65,14 @@ i {
 
 .wrapper {
     max-width: 450px;
+    max-height: 95vh;
     width: 90vw;
     padding: 2rem 1rem;
     border-radius: $radius;
+    overflow-y: auto;
     background-color: $white;
+    transition: $transition;
+    transition-property: opacity, visibility;
 }
 
 .header {

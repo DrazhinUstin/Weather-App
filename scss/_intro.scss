@@ -1,3 +1,14 @@
+.intro {
+    &.show-result {
+        opacity: 0;
+        visibility: hidden;
+    }
+    &.show-result ~ .search-result {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 .message-area {
     height: 4rem;
     @extend %grid-center;

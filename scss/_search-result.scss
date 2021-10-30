@@ -1,15 +1,8 @@
 .search-result {
     @include fixed-position(50%, 50%, unset, translate(-50%, -50%));
-    max-height: 95vh;
-    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
     text-align: center;
-    transition: $transition;
-    &.show {
-        opacity: 1;
-        visibility: visible;
-    }
 }
 
 .date {

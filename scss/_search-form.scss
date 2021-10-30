@@ -26,6 +26,7 @@
     button {
         border: none;
         background-color: inherit;
+        line-height: 1;
     }
     .submit-btn {
         @include absolute-position(50%, 0.5rem, unset, translateY(-50%));

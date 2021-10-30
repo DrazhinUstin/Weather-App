@@ -4,9 +4,9 @@ import {setDate, displayMessage} from "./utils.js";
 
 const setupSearch = () => {
 
+    const intro = document.querySelector('.intro');
     const form = document.querySelector('.search-form');
     const input = document.querySelector('.search-form input');
-    const resultDOM = document.querySelector('.search-result');
     const clearBtn = document.querySelector('.clear-btn');
     const returnBtn = document.querySelector('.return');
     const geolocationBtn = document.querySelector('.geolocation');
@@ -23,7 +23,7 @@ const setupSearch = () => {
         } else {
             displayData(data);
             setDate();
-            resultDOM.classList.add('show');
+            intro.classList.add('show-result');
         }
     });
     
@@ -35,7 +35,7 @@ const setupSearch = () => {
     returnBtn.addEventListener('click', () => {
         input.value = '';
         displayMessage('Welcome to weather app! Want to get information about weather?');
-        resultDOM.classList.remove('show');
+        intro.classList.remove('show-result');
     });
     
     geolocationBtn.addEventListener('click', () => {
@@ -51,7 +51,7 @@ const setupSearch = () => {
         } else {
             displayData(data);
             setDate();
-            resultDOM.classList.add('show');
+            intro.classList.add('show-result');
         }
     };
     

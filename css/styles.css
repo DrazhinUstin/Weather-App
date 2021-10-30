@@ -71,6 +71,16 @@
   }
 }
 
+.intro.show-result {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.intro.show-result ~ .search-result {
+  opacity: 1;
+  visibility: visible;
+}
+
 .message-area {
   height: 4rem;
   margin: 2rem 0;
@@ -154,6 +164,7 @@
 .search-form button {
   border: none;
   background-color: inherit;
+  line-height: 1;
 }
 
 .search-form .submit-btn {
@@ -184,18 +195,9 @@
   right: unset;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-height: 95vh;
-  overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   text-align: center;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-.search-result.show {
-  opacity: 1;
-  visibility: visible;
 }
 
 .date {
@@ -317,7 +319,6 @@ p {
 }
 
 button {
-  line-height: 1;
   cursor: pointer;
 }
 
@@ -346,10 +347,16 @@ i {
 /*************************************** COMMON CLASSES ***************************************/
 .wrapper {
   max-width: 450px;
+  max-height: 95vh;
   width: 90vw;
   padding: 2rem 1rem;
   border-radius: 0.5rem;
+  overflow-y: auto;
   background-color: #fff;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
 }
 
 .header {
